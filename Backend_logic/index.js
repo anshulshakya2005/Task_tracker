@@ -10,8 +10,9 @@ const PORT = process.env.PORT || 8080;
 
 /* ✅ MUST BE FIRST */
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://task-tracker-1-brw4.onrender.com"],
   methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
 
 /* JSON parser */
